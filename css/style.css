@@ -1,0 +1,89 @@
+body{
+    background-color: rgb(211, 211, 19);
+}
+h1{
+    color: blue;
+}
+.container{
+    width: 450px;
+    height: 450px  ;
+    background-color: #faebd7;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+/*piliin lahat ng square sa array */
+.container .squares:nth-child(-n+4){
+    background-image: url("../image/icons/icons.png");
+    color: #fff;
+    float: left;
+    width: 100px;
+    height: 100px;
+   border-radius: 25%;
+    border: 1px solid black;
+    margin: 5px;
+}
+/*piliin lahat ng square paragraph sa array */
+.squares:nth-child(-n+4) p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0%;
+    color: black;
+   
+}
+/*piliin isa-isa ang square sa array */
+.squares:nth-child(1){
+    background-color: rgb(255, 0, 0);
+}
+.squares:nth-child(2){
+    background-color: rgb(0, 255, 17);
+}
+.squares:nth-child(3){
+    background-color: rgb(255, 0, 157);
+}
+.squares:nth-child(4){
+    background-color: rgb(21, 0, 255);
+}
+
+/*Hover effect naman 
+.container .squares:nth-child(-n+5):hover{
+    background-image: url(../image/icons/icons2.png);
+    cursor: pointer;
+  
+}
+*/
+/*Hover effect naman gusto mo may animation */
+.container .squares:nth-child(-n+4):hover{
+    background-image: url(../image/icons/icons2.png);
+    cursor: pointer;
+    transform: scale(.5);
+    animation-name: race;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(2.5, .2, .3, 2);
+
+}
+.squares:nth-child(1):hover{
+    background-color: rgb(242, 242, 12);
+}
+.squares:nth-child(2):hover{
+    background-color: rgb(242, 96, 12);
+}
+.squares:nth-child(3):hover{
+    background-color: rgb(146, 12, 242);
+}
+.squares:nth-child(4):hover{
+    background-color: rgb(242, 12, 142);
+}
+/*ito ay isang animation effect na tatawagin mo ang annimation name na gusto mo */
+@keyframes race
+{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(320px);
+    }
+    
+}
